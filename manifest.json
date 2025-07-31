@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Word Meaning Finder",
+  "version": "1.0",
+  "description": "Right-click any word to find its meaning instantly using a dictionary API.",
+  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
