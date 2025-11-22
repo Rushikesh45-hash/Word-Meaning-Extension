@@ -113,8 +113,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         const def = definitions[currentIndex];
         const fullText = `${word}: ${def.meaning}\nExample: ${def.example}`;
         navigator.clipboard.writeText(fullText)
-          .then(() => e.target.textContent = "☑️ Copied!")
-          .catch(() => e.target.textContent = "❌ Error");
+          .then(() => e.target.textContent = " Copied!")
+          .catch(() => e.target.textContent = " Error");
       }
     });
     let popupTimeout = setTimeout(() => popup.remove(), 5000);
@@ -129,3 +129,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   });
   }
 });
+
