@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "showMeaning") {
-    console.log("📩 Received message in content.js:", message);
+    console.log(" Received message in content.js:", message);
 
     const word = message.word || "Unknown word";
     const definitions = message.definitions || [];
@@ -129,4 +129,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   });
   }
 });
+
 
